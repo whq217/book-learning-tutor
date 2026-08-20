@@ -1,6 +1,6 @@
 # book-learning-tutor · 读书引导学习技能
 
-一个 [Claude Code](https://claude.com/claude-code) 技能（Skill）：让 AI 用**费曼方式**带你真正读透一本书。
+一个同时兼容 [WorkBuddy](https://www.workbuddy.cn) 和 [Claude Code](https://claude.com/claude-code) 的技能（Skill）：让 AI 用**费曼方式**带你真正读透一本书。
 
 不是摘要，不是伴读，是「讲解 → 确认理解 → 出题测试 → 答错重讲」的完整学习闭环。
 
@@ -32,7 +32,31 @@ Phase 4: 学习成果固化（可选，生成笔记归档）
 
 ## 安装
 
-### 方式一：全局安装（所有项目可用）
+### WorkBuddy 用户（推荐）
+
+**方式一：SkillHub 一键安装**（技能审核上架后可用）
+
+在 WorkBuddy 客户端左侧「技能」页搜索「读书引导学习」或「book-learning-tutor」，点安装即可。
+
+**方式二：手动安装**（上架前也可用）
+
+```bash
+git clone https://github.com/whq217/book-learning-tutor.git
+mkdir -p ~/.workbuddy/skills
+cp -r book-learning-tutor/book-learning-tutor ~/.workbuddy/skills/
+```
+
+Windows (PowerShell)：
+
+```powershell
+git clone https://github.com/whq217/book-learning-tutor.git
+New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.workbuddy\skills"
+Copy-Item -Recurse book-learning-tutor\book-learning-tutor "$env:USERPROFILE\.workbuddy\skills\"
+```
+
+### Claude Code 用户
+
+#### 方式一：全局安装（所有项目可用）
 
 ```bash
 git clone https://github.com/whq217/book-learning-tutor.git
@@ -48,7 +72,7 @@ New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.claude\skills"
 Copy-Item -Recurse book-learning-tutor\book-learning-tutor "$env:USERPROFILE\.claude\skills\"
 ```
 
-### 方式二：项目级安装（仅当前项目）
+#### 方式二：项目级安装（仅当前项目）
 
 把 `book-learning-tutor/` 文件夹复制到你的项目下：
 
@@ -58,7 +82,7 @@ Copy-Item -Recurse book-learning-tutor\book-learning-tutor "$env:USERPROFILE\.cl
 
 ## 使用
 
-安装后对 Claude 说：
+安装后对 AI 助手说：
 
 - 「帮我学这本书」/「带我读《XX》」
 - 「我想搞懂这个材料」（扔一个文件或链接）
@@ -78,6 +102,16 @@ book-learning-tutor/
     └── learning-notes-template.md        # 学习笔记模板
 ```
 
-## License
+## 版权与使用声明
 
-MIT
+© 2026 公众号「庆哥聊AI」· 采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh) 协议
+
+**你可以免费做**：安装、使用、修改、再分发（包括商用）。
+
+**你必须遵守**：
+
+1. **注明出处**——公开使用或基于本技能产出内容时，注明「来源：公众号庆哥聊AI」
+2. **保留声明**——再分发或二次开发时，完整保留本声明和原协议链接
+3. **不得冒名**——不得移除或篡改署名后以自己名义发布
+
+完整条款见 [CC BY 4.0 协议中文版](https://creativecommons.org/licenses/by/4.0/deed.zh)。
