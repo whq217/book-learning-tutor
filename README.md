@@ -35,17 +35,17 @@ Phase 4: 学习成果固化（可选，生成笔记归档）
 ### 方式一：全局安装（所有项目可用）
 
 ```bash
-git clone https://github.com/<你的用户名>/book-learning-tutor-public.git
+git clone https://github.com/whq217/book-learning-tutor.git
 mkdir -p ~/.claude/skills
-cp -r book-learning-tutor-public/book-learning-tutor ~/.claude/skills/
+cp -r book-learning-tutor/book-learning-tutor ~/.claude/skills/
 ```
 
 Windows (PowerShell)：
 
 ```powershell
-git clone https://github.com/<你的用户名>/book-learning-tutor-public.git
+git clone https://github.com/whq217/book-learning-tutor.git
 New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.claude\skills"
-Copy-Item -Recurse book-learning-tutor-public\book-learning-tutor "$env:USERPROFILE\.claude\skills\"
+Copy-Item -Recurse book-learning-tutor\book-learning-tutor "$env:USERPROFILE\.claude\skills\"
 ```
 
 ### 方式二：项目级安装（仅当前项目）
